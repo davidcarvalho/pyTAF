@@ -1,18 +1,9 @@
-import json
-
-import pytest
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
-
 from pytaf.duckduckgo.pages.results import DuckDuckGoResultPage
 from pytaf.duckduckgo.pages.search import DuckDuckGoSearchPage
 
 
 def test_duckduckgo(browser):
-    url = 'https://duckduckgo.com/'
     search_key = 'thinkpad'
-    browser.get(url)
 
     search_page = DuckDuckGoSearchPage(browser)
     search_page.load()
